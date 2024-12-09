@@ -18,6 +18,5 @@ Setup:
 -Go to Settings>Add-ons>ADD-ON STORE and add "File editor" to HAOS
 -Once installed, go to File editor and open configuration.yaml
 -Add the contents of configuration.txt from this repo to the end of configuration.yaml
--
 -Reboot to apply settings
 -In HAOS Overview, add new cards for the thermometer data and LED controls
