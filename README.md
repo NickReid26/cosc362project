@@ -2,6 +2,7 @@ Setup:
 -Use Raspberry Pi Imager to create load 2 SD cards with Home Assistant OS and Raspberry Pi OS
   --When imaging, configure wlan for both operating systems in the advanced settings
 
+
   Device Controller (Raspberry Pi Zero 2W)
 
 -Connect the DHT22 sensor and RGB LED to the GPIO pins
@@ -17,6 +18,7 @@ Setup:
 -Set up the scripts to run within the virtual environment on startup with bash commands
 
 -reboot to run scripts
+
 
   Home Assistant (Raspberry Pi 4)
   
