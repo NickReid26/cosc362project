@@ -3,8 +3,8 @@ import random
 import requests
 
 # Home Assistant API details
-home_assistant_ip = "http://192.168.137.187:8123"  # Replace with your Pi 4's IP address
-access_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkOWU1ZDdmMjM2Nzg0ZDBkODI4YWJiNmU0MTJmMzZiNCIsImlhdCI6MTczMzYzMzMyMiwiZXhwIjoyMDQ4OTkzMzIyfQ.na9NPP637gwcmKCGHJuZy6m2yC_v729xOB5PDFUYQlU"  # Replace with your Home Assistant token
+home_assistant_ip = "http://<Pi4IPaddress>:8123"  # Replace with your Pi 4's IP address
+access_token = "<access token>"  # Replace with your Home Assistant token
 
 # Home Assistant entity IDs for temperature and humidity sensor
 temperature_entity = "sensor.temperature"

@@ -1,0 +1,41 @@
+rest_command:
+  set_rgb_led:
+    url: "http://<PiZero2WIPaddress>:5000/set_color"
+    method: POST
+    content_type: "application/json"
+    payload: '{"red": {{ red }}, "green": {{ green }}, "blue": {{ blue }}}'
+
+input_number:
+  red_value:
+    name: Red Value
+    min: 0
+    max: 100
+    step: 1
+
+  green_value:
+    name: Green Value
+    min: 0
+    max: 100
+    step: 1
+
+  blue_value:
+    name: Blue Value
+    min: 0
+    max: 100
+    step: 1
+
+automation:
+  - alias: "Set RGB LED Color"
+    trigger:
+      - platform: state
+        entity_id:
+          - input_number.red_value
+          - input_number.green_value
+          - input_number.blue_value
+    action:
+      - service: rest_command.set_rgb_led
+        data_template:
+          red: "{{ states('input_number.red_value') | int }}"
+          green: "{{ states('input_number.green_value') | int }}"
+          blue: "{{ states('input_number.blue_value') | int }}"
+

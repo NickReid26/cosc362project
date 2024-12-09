@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Python Scripts in Virtual Environment
+After=network.target
+
+[Service]
+ExecStart=/path/to/run_scripts.sh
+Restart=always
+User=pi
+WorkingDirectory=/path/to/project/directory
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
